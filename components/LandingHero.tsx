@@ -9,7 +9,7 @@ export function LandingHero() {
         alt="Ab Creative World — dragon over a glowing city"
         fill
         priority
-        className="object-cover object-center brightness-110 contrast-105"
+        className="hero-kenburns object-cover object-center brightness-110 contrast-105"
         sizes="100vw"
       />
       {/* Soft top fade so CTAs stay readable without covering the center title */}
@@ -18,14 +18,14 @@ export function LandingHero() {
       {/* Tip + description sit ABOVE the baked-in AB CREATIVE WORLD title */}
       <div className="relative mx-auto flex min-h-[70vh] max-w-6xl flex-col justify-start px-4 pb-12 pt-24 sm:min-h-[78vh] sm:px-6 sm:pt-28">
         <h1 className="sr-only">Ab Creative World</h1>
-        <p className="max-w-md rounded-xl bg-black/35 px-3 py-2 text-sm leading-relaxed text-white/95 backdrop-blur-sm sm:text-base">
+        <p className="hero-fade-up max-w-md rounded-xl bg-black/35 px-3 py-2 text-sm leading-relaxed text-white/95 backdrop-blur-sm sm:text-base">
           Studio home for trailers, music, and creative drops — tip if you want
           to keep the work going.
         </p>
-        <div className="mt-5 flex flex-wrap gap-3">
+        <div className="hero-fade-up-delay mt-5 flex flex-wrap gap-3">
           <Link
             href="/tip"
-            className="inline-flex items-center rounded-full bg-studio-accent px-6 py-2.5 text-sm font-semibold text-studio-bg shadow-glow transition hover:bg-studio-accent/90"
+            className="tip-glow-pulse inline-flex items-center rounded-full bg-studio-accent px-6 py-2.5 text-sm font-semibold text-studio-bg shadow-glow transition hover:bg-studio-accent/90"
           >
             Tip
           </Link>
