@@ -6,9 +6,9 @@ import { usePathname } from "next/navigation";
 const tabs = [
   { href: "/", label: "Home", match: (p: string) => p === "/" },
   {
-    href: "/#projects",
+    href: "/work",
     label: "Work",
-    match: (p: string) => p === "/" || p.startsWith("/projects"),
+    match: (p: string) => p.startsWith("/work") || p.startsWith("/projects"),
   },
   { href: "/tip", label: "Tip", match: (p: string) => p.startsWith("/tip") },
   {
@@ -24,17 +24,17 @@ export function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-studio-bg/75 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-3 py-3 sm:px-6">
-        <Link href="/" className="shrink-0 group flex items-baseline gap-1.5">
+        <Link href="/" className="group flex shrink-0 items-baseline gap-1.5">
           <span className="text-base font-semibold tracking-tight text-studio-text sm:text-lg">
             Ab Creative
           </span>
-          <span className="hidden text-[10px] uppercase tracking-[0.18em] text-studio-muted transition-colors group-hover:text-studio-accent xs:inline sm:text-xs">
+          <span className="hidden text-[10px] uppercase tracking-[0.18em] text-studio-muted transition-colors group-hover:text-studio-accent sm:inline sm:text-xs">
             World
           </span>
         </Link>
 
         <nav
-          className="flex max-w-[70%] items-center gap-1 overflow-x-auto rounded-full border border-white/10 bg-black/35 p-1 sm:max-w-none sm:gap-1.5"
+          className="flex max-w-[72%] items-center gap-1 overflow-x-auto rounded-full border border-white/10 bg-black/35 p-1 sm:max-w-none sm:gap-1.5"
           aria-label="Primary"
         >
           {tabs.map((tab) => {
