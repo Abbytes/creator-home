@@ -3,19 +3,20 @@ import Link from "next/link";
 
 export function LandingHero() {
   return (
-    <section className="relative h-full w-full overflow-hidden overscroll-none">
+    <section className="relative h-[100dvh] w-full overflow-hidden overscroll-none bg-black">
+      {/* Cinematic frame: full art visible (contain) so portrait doesn't force scroll */}
       <Image
         src="/hero-ab-creative-world.png"
         alt="Ab Creative World — dragon over a glowing city"
         fill
         priority
-        className="hero-kenburns object-cover object-[center_35%] brightness-110 contrast-105 sm:object-center"
+        className="hero-kenburns object-contain object-center brightness-110 contrast-105"
         sizes="100vw"
         draggable={false}
       />
 
       <div
-        className="lightning-flash absolute inset-0 bg-[radial-gradient(ellipse_at_50%_28%,_rgba(255,160,40,0.55),_transparent_55%)]"
+        className="lightning-flash absolute inset-0 bg-[radial-gradient(ellipse_at_50%_28%,_rgba(255,160,40,0.45),_transparent_55%)]"
         aria-hidden
       />
 
@@ -56,12 +57,10 @@ export function LandingHero() {
         </defs>
       </svg>
 
-      <div className="absolute inset-x-0 top-0 z-10 h-36 bg-gradient-to-b from-studio-bg/75 to-transparent" />
-
-      {/* Tip + description at TOP (under tabs) — matches the shot Adam liked */}
-      <div className="absolute inset-x-0 top-0 z-20 mx-auto flex max-w-6xl flex-col px-4 pb-6 pt-20 sm:px-6 sm:pt-24">
+      {/* Left cluster like Adam's shot — Tip / Browse / Sparta */}
+      <div className="absolute left-0 top-0 z-20 flex h-full max-w-md flex-col justify-center px-4 pt-16 sm:px-8 sm:pt-12">
         <h1 className="sr-only">Ab Creative World</h1>
-        <p className="hero-fade-up max-w-md rounded-xl bg-black/40 px-3 py-2 text-sm leading-relaxed text-white/95 backdrop-blur-sm sm:text-base">
+        <p className="hero-fade-up rounded-xl bg-black/45 px-3 py-2 text-sm leading-relaxed text-white/95 backdrop-blur-sm sm:text-base">
           Studio home for trailers, music, and creative drops — tip if you want
           to keep the work going.
         </p>
@@ -76,7 +75,13 @@ export function LandingHero() {
             href="/work"
             className="inline-flex min-h-11 items-center rounded-full border border-white/35 bg-white/10 px-6 py-2.5 text-sm font-medium text-white backdrop-blur transition hover:border-studio-accent/60 hover:bg-studio-accent/15"
           >
-            Work
+            Browse work
+          </Link>
+          <Link
+            href="/projects/spartas-revenge"
+            className="inline-flex min-h-11 items-center rounded-full border border-white/25 bg-white/5 px-6 py-2.5 text-sm text-white/85 backdrop-blur transition hover:border-white/50 hover:text-white"
+          >
+            Sparta&apos;s Revenge
           </Link>
         </div>
       </div>
