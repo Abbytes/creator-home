@@ -9,16 +9,15 @@ export function LandingHero() {
         alt="Ab Creative World — dragon over a glowing city"
         fill
         priority
-        className="object-cover object-center"
+        className="object-cover object-center brightness-110 contrast-105"
         sizes="100vw"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-studio-bg via-studio-bg/40 to-black/20" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_35%,_rgba(11,12,15,0.55)_100%)]" />
+      {/* Light bottom fade only — keep the art readable */}
+      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-studio-bg/80 to-transparent" />
 
       <div className="relative mx-auto flex min-h-[70vh] max-w-6xl flex-col justify-end px-4 pb-12 pt-28 sm:min-h-[78vh] sm:px-6 sm:pb-16">
-        {/* Title is baked into the art; keep a live sr-only / mobile fallback for SEO */}
         <h1 className="sr-only">Ab Creative World</h1>
-        <p className="max-w-md text-sm leading-relaxed text-studio-text/90 sm:text-base">
+        <p className="max-w-md rounded-xl bg-black/25 px-3 py-2 text-sm leading-relaxed text-white/95 backdrop-blur-sm sm:text-base">
           Studio home for trailers, music, and creative drops — tip if you want
           to keep the work going.
         </p>
@@ -31,13 +30,13 @@ export function LandingHero() {
           </Link>
           <a
             href="#projects"
-            className="inline-flex items-center rounded-full border border-white/20 bg-black/35 px-6 py-2.5 text-sm font-medium text-studio-text backdrop-blur transition hover:border-studio-accent/50 hover:text-studio-accent"
+            className="inline-flex items-center rounded-full border border-white/35 bg-white/10 px-6 py-2.5 text-sm font-medium text-white backdrop-blur transition hover:border-studio-accent/60 hover:bg-studio-accent/15"
           >
             Browse work
           </a>
           <Link
             href="/projects/spartas-revenge"
-            className="inline-flex items-center rounded-full border border-white/15 bg-black/25 px-6 py-2.5 text-sm text-studio-muted backdrop-blur transition hover:border-studio-muted hover:text-studio-text"
+            className="inline-flex items-center rounded-full border border-white/25 bg-white/5 px-6 py-2.5 text-sm text-white/85 backdrop-blur transition hover:border-white/50 hover:text-white"
           >
             Sparta&apos;s Revenge
           </Link>
