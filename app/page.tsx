@@ -5,7 +5,7 @@ export default function HomePage() {
   return (
     <>
       <HomeScrollLock />
-      <div className="h-[100dvh] max-h-[100dvh] overflow-hidden">
+      <div className="fixed inset-0 z-0 overflow-hidden overscroll-none">
         <LandingHero />
       </div>
     </>

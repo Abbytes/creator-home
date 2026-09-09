@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function LandingHero() {
   return (
-    <section className="relative isolate h-[100dvh] max-h-[100dvh] overflow-hidden">
+    <section className="relative h-full w-full overflow-hidden overscroll-none">
       <Image
         src="/hero-ab-creative-world.png"
         alt="Ab Creative World — dragon over a glowing city"
@@ -11,6 +11,7 @@ export function LandingHero() {
         priority
         className="hero-kenburns object-cover object-[center_35%] brightness-110 contrast-105 sm:object-center"
         sizes="100vw"
+        draggable={false}
       />
 
       <div
@@ -55,10 +56,10 @@ export function LandingHero() {
         </defs>
       </svg>
 
-      <div className="absolute inset-x-0 top-0 z-10 h-28 bg-gradient-to-b from-studio-bg/80 to-transparent" />
-      <div className="absolute inset-x-0 bottom-0 z-10 h-36 bg-gradient-to-t from-studio-bg/90 to-transparent" />
+      <div className="absolute inset-x-0 top-0 z-10 h-36 bg-gradient-to-b from-studio-bg/75 to-transparent" />
 
-      <div className="relative z-20 mx-auto flex h-full max-w-6xl flex-col justify-end px-4 pb-8 pt-24 sm:px-6 sm:pb-10">
+      {/* Tip + description at TOP (under tabs) — matches the shot Adam liked */}
+      <div className="absolute inset-x-0 top-0 z-20 mx-auto flex max-w-6xl flex-col px-4 pb-6 pt-20 sm:px-6 sm:pt-24">
         <h1 className="sr-only">Ab Creative World</h1>
         <p className="hero-fade-up max-w-md rounded-xl bg-black/40 px-3 py-2 text-sm leading-relaxed text-white/95 backdrop-blur-sm sm:text-base">
           Studio home for trailers, music, and creative drops — tip if you want
@@ -71,12 +72,12 @@ export function LandingHero() {
           >
             Tip
           </Link>
-          <a
+          <Link
             href="/work"
             className="inline-flex min-h-11 items-center rounded-full border border-white/35 bg-white/10 px-6 py-2.5 text-sm font-medium text-white backdrop-blur transition hover:border-studio-accent/60 hover:bg-studio-accent/15"
           >
             Work
-          </a>
+          </Link>
         </div>
       </div>
     </section>
