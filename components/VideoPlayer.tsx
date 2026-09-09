@@ -14,8 +14,8 @@ export function VideoPlayer({ src, title }: VideoPlayerProps) {
           controls
           playsInline
           preload="metadata"
-          // Mute + autoplay OFF by default — user starts playback intentionally
-          muted={false}
+          // Mute on + autoplay OFF by default — user starts playback intentionally
+          muted
           autoPlay={false}
           title={title}
         >
