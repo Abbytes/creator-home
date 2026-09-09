@@ -1,33 +1,59 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const tabs = [
+  { href: "/", label: "Home", match: (p: string) => p === "/" },
+  {
+    href: "/#projects",
+    label: "Work",
+    match: (p: string) => p === "/" || p.startsWith("/projects"),
+  },
+  { href: "/tip", label: "Tip", match: (p: string) => p.startsWith("/tip") },
+  {
+    href: "/projects/spartas-revenge",
+    label: "Sparta’s Revenge",
+    match: (p: string) => p.includes("spartas-revenge"),
+  },
+];
 
 export function Header() {
+  const pathname = usePathname() || "/";
+
   return (
-    <header className="border-b border-studio-border/80 bg-studio-bg/80 backdrop-blur-md sticky top-0 z-40">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
-        <Link href="/" className="group flex items-baseline gap-2">
-          <span className="text-lg font-semibold tracking-tight text-studio-text">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-studio-bg/75 backdrop-blur-md">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-3 py-3 sm:px-6">
+        <Link href="/" className="shrink-0 group flex items-baseline gap-1.5">
+          <span className="text-base font-semibold tracking-tight text-studio-text sm:text-lg">
             Ab Creative
           </span>
-          <span className="text-xs uppercase tracking-[0.2em] text-studio-muted group-hover:text-studio-accent transition-colors">
+          <span className="hidden text-[10px] uppercase tracking-[0.18em] text-studio-muted transition-colors group-hover:text-studio-accent xs:inline sm:text-xs">
             World
           </span>
         </Link>
-        <nav className="flex items-center gap-6 text-sm text-studio-muted">
-          <Link href="/" className="hover:text-studio-text transition-colors">
-            Work
-          </Link>
-          <Link
-            href="/#projects"
-            className="hover:text-studio-text transition-colors"
-          >
-            Projects
-          </Link>
-          <Link
-            href="/tip"
-            className="rounded-full border border-studio-accent/40 bg-studio-accent/10 px-3 py-1 text-studio-accent transition hover:bg-studio-accent/20 hover:text-studio-accent"
-          >
-            Tip
-          </Link>
+
+        <nav
+          className="flex max-w-[70%] items-center gap-1 overflow-x-auto rounded-full border border-white/10 bg-black/35 p-1 sm:max-w-none sm:gap-1.5"
+          aria-label="Primary"
+        >
+          {tabs.map((tab) => {
+            const active = tab.match(pathname);
+            return (
+              <Link
+                key={tab.href}
+                href={tab.href}
+                className={[
+                  "whitespace-nowrap rounded-full px-3 py-2 text-xs font-medium transition sm:px-4 sm:text-sm",
+                  active
+                    ? "bg-studio-accent text-studio-bg shadow-glow"
+                    : "text-white/80 hover:bg-white/10 hover:text-white",
+                ].join(" ")}
+              >
+                {tab.label}
+              </Link>
+            );
+          })}
         </nav>
       </div>
     </header>
