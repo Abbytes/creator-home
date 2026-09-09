@@ -15,13 +15,16 @@ const config: Config = {
           border: "#1e2230",
           muted: "#8b93a7",
           text: "#e8eaef",
-          accent: "#e8a87c",
-          accent2: "#c38d9e",
+          accent: "#ff8c00",
+          accent2: "#e8a87c",
         },
       },
       fontFamily: {
         sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
         display: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
+      },
+      boxShadow: {
+        glow: "0 0 28px -4px rgba(255, 140, 0, 0.55)",
       },
     },
   },
