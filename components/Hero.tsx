@@ -39,6 +39,12 @@ export function Hero({ project }: { project: Project }) {
               >
                 Open project
               </Link>
+              <Link
+                href="/tip"
+                className="inline-flex items-center rounded-full border border-studio-accent/40 bg-studio-accent/10 px-5 py-2.5 text-sm font-medium text-studio-accent transition hover:bg-studio-accent/20"
+              >
+                Tip
+              </Link>
               <a
                 href="#projects"
                 className="inline-flex items-center rounded-full border border-studio-border px-5 py-2.5 text-sm text-studio-muted transition hover:border-studio-muted hover:text-studio-text"

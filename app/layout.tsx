@@ -11,11 +11,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Adam Studio — Creator Home",
-    template: "%s · Adam Studio",
+    default: "Ab Creative World — Creator Studio",
+    template: "%s · Ab Creative World",
   },
   description:
-    "Portfolio-first creator studio. Featured work, projects, and scored trailers.",
+    "Ab Creative World — portfolio-first creator studio. Featured work, projects, and scored trailers.",
 };
 
 export default function RootLayout({

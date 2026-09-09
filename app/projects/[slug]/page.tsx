@@ -54,6 +54,15 @@ export default async function ProjectPage({ params }: Props) {
         <p className="mt-2 text-sm text-studio-muted/80">{project.credit}</p>
       )}
 
+      <div className="mt-6 flex flex-wrap gap-3">
+        <Link
+          href="/tip"
+          className="inline-flex items-center rounded-full border border-studio-accent/40 bg-studio-accent/10 px-5 py-2.5 text-sm font-medium text-studio-accent transition hover:bg-studio-accent/20"
+        >
+          Tip Ab Creative World
+        </Link>
+      </div>
+
       {project.videoUrl && (
         <div className="mt-8">
           <VideoPlayer src={project.videoUrl} title={project.title} />
@@ -62,6 +71,18 @@ export default async function ProjectPage({ params }: Props) {
 
       <div className="prose prose-invert prose-headings:tracking-tight prose-a:text-studio-accent mt-10 max-w-none">
         <MDXRemote source={project.content} />
+      </div>
+
+      <div className="mt-12 rounded-2xl border border-studio-border bg-studio-panel/60 p-6 text-center">
+        <p className="text-sm text-studio-muted">
+          Enjoyed this piece? Tips keep Ab Creative World creating.
+        </p>
+        <Link
+          href="/tip"
+          className="mt-4 inline-flex items-center rounded-full bg-studio-accent px-5 py-2.5 text-sm font-medium text-studio-bg transition hover:bg-studio-accent/90"
+        >
+          Tip the studio
+        </Link>
       </div>
     </article>
   );

@@ -1,6 +1,6 @@
-# Creator Home
+# Ab Creative World — Creator Home
 
-Portfolio-first creator studio site for Adam. Not a social feed — a clean home base for featured work, project pages, and scored trailers.
+Portfolio-first creator studio site for **Ab Creative World**. Not a social feed — a clean home base for featured work, project pages, scored trailers, and tips.
 
 ## Stack
 
@@ -11,6 +11,9 @@ Portfolio-first creator studio site for Adam. Not a social feed — a clean home
 ## Run locally
 
 ```bash
+cp .env.example .env.local
+# Set INTERAC_TIP_EMAIL (required for Interac copy button)
+# Optionally set STRIPE_PAYMENT_LINK
 npm install
 npm run dev
 ```
@@ -24,12 +27,22 @@ npm run build
 npm start
 ```
 
+## Environment
+
+| Variable | Purpose |
+|----------|---------|
+| `INTERAC_TIP_EMAIL` | Interac e-Transfer address (never displayed as text; Copy button only) |
+| `STRIPE_PAYMENT_LINK` | Optional Stripe Payment Link for card tips |
+
+Copy `.env.example` → `.env.local`. Real values must stay in `.env.local` (gitignored). Never commit secrets.
+
 ## Routes
 
 | Route | Description |
 |-------|-------------|
 | `/` | Homepage — featured hero + project grid |
 | `/projects/[slug]` | Project page (e.g. `/projects/spartas-revenge`) |
+| `/tip` | Tip page — Interac e-Transfer + optional Stripe |
 
 ## Add a project or post
 
@@ -57,7 +70,7 @@ Your markdown / MDX content here.
 
 ## Featured project (v1)
 
-**Sparta's Revenge** — scored trailer player (autoplay off; mute off by default), title, one-liner, **Scored** tag, and music/SFX credit.
+**Sparta's Revenge** — scored trailer player (autoplay off; mute on by default), title, one-liner, **Scored** tag, and music/SFX credit.
 
 Trailer:
 
