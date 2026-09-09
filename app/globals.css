@@ -158,3 +158,9 @@ html.home-lock::-webkit-scrollbar {
   width: 0;
   height: 0;
 }
+
+
+/* Never let ken burns enlarge layout box */
+.hero-kenburns {
+  transform-origin: center center;
+}

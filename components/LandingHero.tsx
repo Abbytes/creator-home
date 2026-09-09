@@ -1,20 +1,14 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export function LandingHero() {
   return (
-    <section className="relative h-[100dvh] w-full overflow-hidden overscroll-none bg-black">
-      {/* Cinematic frame: full art visible (contain) so portrait doesn't force scroll */}
-      <Image
-        src="/hero-ab-creative-world.png"
-        alt="Ab Creative World — dragon over a glowing city"
-        fill
-        priority
-        className="hero-kenburns object-contain object-center brightness-110 contrast-105"
-        sizes="100vw"
-        draggable={false}
-      />
-
+    <section
+      className="relative h-[100dvh] max-h-[100dvh] w-full overflow-hidden overscroll-none bg-black bg-center bg-no-repeat"
+      style={{
+        backgroundImage: "url('/hero-ab-creative-world.png')",
+        backgroundSize: "cover",
+      }}
+    >
       <div
         className="lightning-flash absolute inset-0 bg-[radial-gradient(ellipse_at_50%_28%,_rgba(255,160,40,0.45),_transparent_55%)]"
         aria-hidden
@@ -57,7 +51,6 @@ export function LandingHero() {
         </defs>
       </svg>
 
-      {/* Left cluster like Adam's shot — Tip / Browse / Sparta */}
       <div className="absolute left-0 top-0 z-20 flex h-full max-w-md flex-col justify-center px-4 pt-16 sm:px-8 sm:pt-12">
         <h1 className="sr-only">Ab Creative World</h1>
         <p className="hero-fade-up rounded-xl bg-black/45 px-3 py-2 text-sm leading-relaxed text-white/95 backdrop-blur-sm sm:text-base">
