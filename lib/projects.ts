@@ -12,6 +12,8 @@ export type ProjectFrontmatter = {
   featured?: boolean;
   videoUrl?: string;
   credit?: string;
+  playUrl?: string;
+  playLabel?: string;
   order?: number;
   date?: string;
 };
@@ -50,6 +52,8 @@ export function getProjectBySlug(slug: string): Project | null {
     featured: Boolean(fm.featured),
     videoUrl: fm.videoUrl,
     credit: fm.credit,
+    playUrl: fm.playUrl,
+    playLabel: fm.playLabel,
     order: fm.order ?? 999,
     date: fm.date,
     content,

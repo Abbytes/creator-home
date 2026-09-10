@@ -17,6 +17,12 @@ const tabs = [
     match: (p: string) => p.includes("spartas-revenge"),
     kind: "tab" as const,
   },
+  {
+    href: "/aether/",
+    label: "Aether",
+    match: (p: string) => p.includes("aether"),
+    kind: "tab" as const,
+  },
   { href: "/tip", label: "Tip", match: (p: string) => p.startsWith("/tip"), kind: "tip" as const },
 ];
 

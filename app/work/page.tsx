@@ -13,7 +13,7 @@ export default function WorkPage() {
         Work
       </h1>
       <p className="mt-3 max-w-xl text-studio-muted">
-        Trailers, scored cuts, and studio drops.
+        Trailers, scored cuts, and interactive drops.
       </p>
 
       {projects.length === 0 ? (

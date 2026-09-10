@@ -55,6 +55,14 @@ export default async function ProjectPage({ params }: Props) {
       )}
 
       <div className="mt-6 flex flex-wrap gap-3">
+        {project.playUrl && (
+          <a
+            href={project.playUrl}
+            className="inline-flex items-center rounded-full bg-studio-accent px-5 py-2.5 text-sm font-semibold text-studio-bg transition hover:bg-studio-accent/90"
+          >
+            {project.playLabel || "Play"}
+          </a>
+        )}
         <Link
           href="/tip"
           className="inline-flex items-center rounded-full border border-studio-accent/40 bg-studio-accent/10 px-5 py-2.5 text-sm font-medium text-studio-accent transition hover:bg-studio-accent/20"

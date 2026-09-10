@@ -76,6 +76,12 @@ export function LandingHero() {
           >
             Sparta&apos;s Revenge
           </Link>
+          <Link
+            href="/aether/"
+            className="inline-flex min-h-11 items-center rounded-full border border-white/25 bg-white/5 px-6 py-2.5 text-sm text-white/85 backdrop-blur transition hover:border-white/50 hover:text-white"
+          >
+            Aether
+          </Link>
         </div>
       </div>
     </section>
