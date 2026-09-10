@@ -4,7 +4,7 @@ import { HomeScrollLock } from "@/components/HomeScrollLock";
 export default function HomePage() {
   return (
     <>
-      {/* SSR lock — works before JS hydrates (critical for mobile) */}
+      {/* Keep the hero locked, but never swallow taps on iOS */}
       <style
         dangerouslySetInnerHTML={{
           __html: `
@@ -13,16 +13,14 @@ export default function HomePage() {
               max-height: 100dvh !important;
               overflow: hidden !important;
               overscroll-behavior: none !important;
-              touch-action: none !important;
-              position: fixed !important;
-              inset: 0 !important;
+              touch-action: manipulation !important;
               width: 100% !important;
               scrollbar-width: none !important;
             }
             html::-webkit-scrollbar, body::-webkit-scrollbar { display: none !important; width: 0 !important; height: 0 !important; }
             main { overflow: hidden !important; height: 100% !important; max-height: 100dvh !important; }
             footer { display: none !important; }
-            a, button { touch-action: manipulation !important; pointer-events: auto !important; }
+            a, button, [role="button"] { touch-action: manipulation !important; pointer-events: auto !important; cursor: pointer !important; }
           `,
         }}
       />
