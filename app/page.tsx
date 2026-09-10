@@ -22,6 +22,7 @@ export default function HomePage() {
             html::-webkit-scrollbar, body::-webkit-scrollbar { display: none !important; width: 0 !important; height: 0 !important; }
             main { overflow: hidden !important; height: 100% !important; max-height: 100dvh !important; }
             footer { display: none !important; }
+            a, button { touch-action: manipulation !important; pointer-events: auto !important; }
           `,
         }}
       />

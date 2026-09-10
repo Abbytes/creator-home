@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { APEX_URL } from "@/lib/apex";
 
 const tabs = [
   { href: "/", label: "Home", match: (p: string) => p === "/", kind: "tab" as const },
@@ -18,10 +19,16 @@ const tabs = [
     kind: "tab" as const,
   },
   {
+    href: APEX_URL,
+    label: "APEX",
+    match: () => false,
+    kind: "external" as const,
+  },
+  {
     href: "/aether/",
     label: "Aether",
     match: (p: string) => p.includes("aether"),
-    kind: "tab" as const,
+    kind: "aether" as const,
   },
   { href: "/tip", label: "Tip", match: (p: string) => p.startsWith("/tip"), kind: "tip" as const },
 ];
@@ -63,17 +70,29 @@ export function Header() {
                 </Link>
               );
             }
+            const className = [
+              "whitespace-nowrap rounded-full px-3 py-2 text-xs font-medium transition sm:px-4 sm:text-sm",
+              active
+                ? "bg-white/15 text-white"
+                : "text-white/75 hover:bg-white/10 hover:text-white",
+            ].join(" ");
+            if (tab.kind === "external" || tab.kind === "aether") {
+              return (
+                <a
+                  key={tab.href}
+                  href={tab.href}
+                  className={className}
+                  style={{ touchAction: "manipulation" }}
+                  {...(tab.kind === "external"
+                    ? { target: "_blank", rel: "noopener noreferrer" }
+                    : {})}
+                >
+                  {tab.label}
+                </a>
+              );
+            }
             return (
-              <Link
-                key={tab.href}
-                href={tab.href}
-                className={[
-                  "whitespace-nowrap rounded-full px-3 py-2 text-xs font-medium transition sm:px-4 sm:text-sm",
-                  active
-                    ? "bg-white/15 text-white"
-                    : "text-white/75 hover:bg-white/10 hover:text-white",
-                ].join(" ")}
-              >
+              <Link key={tab.href} href={tab.href} className={className}>
                 {tab.label}
               </Link>
             );

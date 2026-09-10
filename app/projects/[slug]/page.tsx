@@ -58,6 +58,8 @@ export default async function ProjectPage({ params }: Props) {
         {project.playUrl && (
           <a
             href={project.playUrl}
+            target={project.playUrl.startsWith("http") ? "_blank" : undefined}
+            rel={project.playUrl.startsWith("http") ? "noopener noreferrer" : undefined}
             className="inline-flex items-center rounded-full bg-studio-accent px-5 py-2.5 text-sm font-semibold text-studio-bg transition hover:bg-studio-accent/90"
           >
             {project.playLabel || "Play"}
