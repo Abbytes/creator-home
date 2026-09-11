@@ -53,12 +53,23 @@ export function LandingHero() {
         </defs>
       </svg>
 
-      <div className="relative z-20 flex h-full max-w-[20rem] flex-col justify-start px-4 pt-[5.75rem] sm:max-w-md sm:px-8 sm:pt-24">
-        <p className="hero-fade-up rounded-xl bg-black/55 px-3 py-2 text-sm leading-relaxed text-white/95 backdrop-blur-sm sm:text-base">
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-20 bg-gradient-to-b from-black/70 via-black/25 to-transparent px-3 pb-8 pt-[5.6rem] sm:pt-24">
+        <h1 className="text-center font-serif font-light text-[#ead9b4]">
+          <span className="block text-[clamp(2.4rem,12vw,4.8rem)] leading-none tracking-[0.28em]">
+            AB
+          </span>
+          <span className="mt-1.5 block whitespace-nowrap text-[clamp(0.78rem,4.6vw,1.45rem)] uppercase tracking-[0.34em]">
+            Creative World
+          </span>
+        </h1>
+      </div>
+
+      <div className="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-black via-black/75 to-transparent px-4 pb-[max(1.25rem,env(safe-area-inset-bottom))] pt-16">
+        <p className="hero-fade-up mx-auto max-w-sm rounded-xl bg-black/45 px-3 py-2 text-center text-sm leading-relaxed text-white/95 backdrop-blur-sm">
           Studio home for trailers, music, and creative drops — tip if you want
           to keep the work going.
         </p>
-        <div className="hero-fade-up-delay mt-3 flex max-w-[17.5rem] flex-wrap gap-2 sm:max-w-none sm:gap-3">
+        <div className="hero-fade-up-delay mx-auto mt-3 flex max-w-sm flex-wrap justify-center gap-2">
           <Link
             href="/tip"
             className="tip-glow-pulse inline-flex min-h-11 items-center rounded-full bg-studio-accent px-5 py-2 text-sm font-semibold text-studio-bg shadow-glow transition hover:bg-studio-accent/90"
@@ -95,17 +106,6 @@ export function LandingHero() {
             Aether
           </Link>
         </div>
-      </div>
-
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-black via-black/70 to-transparent px-3 pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-28">
-        <h1 className="text-center font-serif font-light text-[#ead9b4]">
-          <span className="block text-[clamp(2.6rem,13vw,5.2rem)] leading-none tracking-[0.28em]">
-            AB
-          </span>
-          <span className="mt-2 block whitespace-nowrap text-[clamp(0.78rem,4.6vw,1.45rem)] uppercase tracking-[0.34em]">
-            Creative World
-          </span>
-        </h1>
       </div>
     </section>
   );
