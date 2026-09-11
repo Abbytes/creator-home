@@ -1,1 +1,1 @@
-export const APEX_URL = "https://royal-rose-daisy-daisy.grok.me";
+export const APEX_URL = "https://abbytes.github.io/sparta-adamo/";

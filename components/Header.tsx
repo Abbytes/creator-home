@@ -83,9 +83,6 @@ export function Header() {
                   href={tab.href}
                   className={className}
                   style={{ touchAction: "manipulation" }}
-                  {...(tab.kind === "external"
-                    ? { target: "_blank", rel: "noopener noreferrer" }
-                    : {})}
                 >
                   {tab.label}
                 </a>
