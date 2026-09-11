@@ -18,12 +18,6 @@ const tabs = [
     kind: "tab" as const,
   },
   {
-    href: "/apex/",
-    label: "APEX",
-    match: () => false,
-    kind: "aether" as const,
-  },
-  {
     href: "/aether/",
     label: "Aether",
     match: (p: string) => p.includes("aether"),
