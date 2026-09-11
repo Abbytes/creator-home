@@ -19,7 +19,6 @@ export const metadata: Metadata = {
 
 export default function TipPage() {
   const pct = goalPercent();
-  const hasStripe = Boolean(creator.stripePaymentLink);
   const hasInterac = Boolean(creator.interacEmail);
 
   return (
@@ -172,31 +171,14 @@ export default function TipPage() {
           Card / international
         </h2>
         <p className="mt-1 text-xs text-studio-muted">
-          Optional Stripe Payment Link for fans outside Canada.
+          Visa, Mastercard, and Apple Pay via Stripe.
         </p>
-        {hasStripe ? (
-          <a
-            href={creator.stripePaymentLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 flex w-full items-center justify-center rounded-xl bg-studio-text px-4 py-3 text-sm font-semibold text-studio-bg transition hover:bg-white"
-          >
-            Tip with card
-          </a>
-        ) : (
-          <div className="mt-4">
-            <button
-              type="button"
-              disabled
-              className="flex w-full cursor-not-allowed items-center justify-center rounded-xl border border-dashed border-studio-border bg-studio-bg/50 px-4 py-3 text-sm font-medium text-studio-muted"
-            >
-              Tip with card
-            </button>
-            <p className="mt-2 text-center text-[11px] text-studio-muted">
-              Stripe Payment Link goes here when ready
-            </p>
-          </div>
-        )}
+        <a
+          href="https://donate.stripe.com/5kQeVfbgPamwftS8xgfQI00"
+          className="relative z-20 mt-4 flex min-h-12 w-full items-center justify-center rounded-xl bg-studio-text px-4 py-3 text-sm font-semibold text-studio-bg active:opacity-80"
+        >
+          Tip with card
+        </a>
       </section>
 
       <footer className="mt-auto border-t border-studio-border/60 pt-6 text-center">
