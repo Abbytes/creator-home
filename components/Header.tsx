@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { APEX_URL } from "@/lib/apex";
 
 const tabs = [
   { href: "/", label: "Home", match: (p: string) => p === "/", kind: "tab" as const },
@@ -17,12 +16,6 @@ const tabs = [
     label: "Sparta’s Revenge",
     match: (p: string) => p.includes("spartas-revenge"),
     kind: "tab" as const,
-  },
-  {
-    href: APEX_URL,
-    label: "APEX",
-    match: () => false,
-    kind: "external" as const,
   },
   {
     href: "/aether/",
@@ -76,7 +69,7 @@ export function Header() {
                 ? "bg-white/15 text-white"
                 : "text-white/75 hover:bg-white/10 hover:text-white",
             ].join(" ");
-            if (tab.kind === "external" || tab.kind === "aether") {
+            if (tab.kind === "aether") {
               return (
                 <a
                   key={tab.href}
