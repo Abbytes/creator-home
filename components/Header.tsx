@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { APEX_URL } from "@/lib/apex";
 
 const tabs = [
   { href: "/", label: "Home", match: (p: string) => p === "/", kind: "tab" as const },
@@ -16,6 +17,12 @@ const tabs = [
     label: "Sparta’s Revenge",
     match: (p: string) => p.includes("spartas-revenge"),
     kind: "tab" as const,
+  },
+  {
+    href: APEX_URL,
+    label: "APEX",
+    match: () => false,
+    kind: "aether" as const,
   },
   {
     href: "/aether/",

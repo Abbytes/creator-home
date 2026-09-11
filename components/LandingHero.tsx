@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { APEX_URL } from "@/lib/apex";
 
 export function LandingHero() {
   return (
@@ -79,6 +80,13 @@ export function LandingHero() {
           >
             Sparta's Revenge
           </Link>
+          <a
+            href={APEX_URL}
+            className="inline-flex min-h-11 items-center rounded-full border border-white/35 bg-white/10 px-6 py-2.5 text-sm font-medium text-white backdrop-blur transition hover:border-studio-accent/60 hover:bg-studio-accent/15"
+            style={{ touchAction: "manipulation" }}
+          >
+            Play APEX
+          </a>
           <Link
             href="/aether/"
             className="inline-flex min-h-11 items-center rounded-full border border-white/25 bg-white/5 px-6 py-2.5 text-sm text-white/85 backdrop-blur transition hover:border-white/50 hover:text-white"
