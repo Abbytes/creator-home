@@ -6,7 +6,7 @@ export function LandingHero() {
     <section
       className="relative h-[100dvh] max-h-[100dvh] w-full overflow-hidden overscroll-none bg-black bg-no-repeat"
       style={{
-        backgroundImage: "url('/hero-ab-creative-world.png')",
+        backgroundImage: "url('/hero-ab-creative-world-v2.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center 42%",
       }}
