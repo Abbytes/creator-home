@@ -52,44 +52,44 @@ export function LandingHero() {
         </defs>
       </svg>
 
-      <div className="relative z-20 flex h-full max-w-md flex-col justify-center px-4 pt-16 sm:px-8 sm:pt-12">
+      <div className="relative z-20 flex h-full max-w-[20rem] flex-col justify-start px-4 pt-[5.75rem] sm:max-w-md sm:px-8 sm:pt-24">
         <h1 className="sr-only">Ab Creative World</h1>
-        <p className="hero-fade-up rounded-xl bg-black/45 px-3 py-2 text-sm leading-relaxed text-white/95 backdrop-blur-sm sm:text-base">
+        <p className="hero-fade-up rounded-xl bg-black/55 px-3 py-2 text-sm leading-relaxed text-white/95 backdrop-blur-sm sm:text-base">
           Studio home for trailers, music, and creative drops — tip if you want
           to keep the work going.
         </p>
-        <div className="hero-fade-up-delay mt-4 flex flex-wrap gap-3">
+        <div className="hero-fade-up-delay mt-3 flex max-w-[17.5rem] flex-wrap gap-2 sm:max-w-none sm:gap-3">
           <Link
             href="/tip"
-            className="tip-glow-pulse inline-flex min-h-11 items-center rounded-full bg-studio-accent px-6 py-2.5 text-sm font-semibold text-studio-bg shadow-glow transition hover:bg-studio-accent/90"
+            className="tip-glow-pulse inline-flex min-h-11 items-center rounded-full bg-studio-accent px-5 py-2 text-sm font-semibold text-studio-bg shadow-glow transition hover:bg-studio-accent/90"
             style={{ touchAction: "manipulation" }}
           >
             Tip
           </Link>
           <Link
             href="/work"
-            className="inline-flex min-h-11 items-center rounded-full border border-white/35 bg-white/10 px-6 py-2.5 text-sm font-medium text-white backdrop-blur transition hover:border-studio-accent/60 hover:bg-studio-accent/15"
+            className="inline-flex min-h-11 items-center rounded-full border border-white/35 bg-white/10 px-5 py-2 text-sm font-medium text-white backdrop-blur transition hover:border-studio-accent/60 hover:bg-studio-accent/15"
             style={{ touchAction: "manipulation" }}
           >
             Browse work
           </Link>
           <Link
             href="/projects/spartas-revenge"
-            className="inline-flex min-h-11 items-center rounded-full border border-white/25 bg-white/5 px-6 py-2.5 text-sm text-white/85 backdrop-blur transition hover:border-white/50 hover:text-white"
+            className="inline-flex min-h-11 items-center rounded-full border border-white/25 bg-white/5 px-5 py-2 text-sm text-white/85 backdrop-blur transition hover:border-white/50 hover:text-white"
             style={{ touchAction: "manipulation" }}
           >
             Sparta's Revenge
           </Link>
           <a
             href={APEX_URL}
-            className="inline-flex min-h-11 items-center rounded-full border border-white/35 bg-white/10 px-6 py-2.5 text-sm font-medium text-white backdrop-blur transition hover:border-studio-accent/60 hover:bg-studio-accent/15"
+            className="inline-flex min-h-11 items-center rounded-full border border-white/35 bg-white/10 px-5 py-2 text-sm font-medium text-white backdrop-blur transition hover:border-studio-accent/60 hover:bg-studio-accent/15"
             style={{ touchAction: "manipulation" }}
           >
             Play APEX
           </a>
           <Link
             href="/aether/"
-            className="inline-flex min-h-11 items-center rounded-full border border-white/25 bg-white/5 px-6 py-2.5 text-sm text-white/85 backdrop-blur transition hover:border-white/50 hover:text-white"
+            className="inline-flex min-h-11 items-center rounded-full border border-white/25 bg-white/5 px-5 py-2 text-sm text-white/85 backdrop-blur transition hover:border-white/50 hover:text-white"
             style={{ touchAction: "manipulation" }}
           >
             Aether
