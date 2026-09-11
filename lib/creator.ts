@@ -28,10 +28,12 @@ export const creator: CreatorConfig = {
   goalRaised: 0,
   goalTarget: 200,
   currency: "CAD",
-  interacEmail: process.env.INTERAC_TIP_EMAIL?.trim() || "",
+  interacEmail: process.env.INTERAC_TIP_EMAIL?.trim() || "adamlegare30@gmail.com",
   interacPhone: undefined,
   interacMessageHint: "Tip for Ab Creative World",
-  stripePaymentLink: process.env.STRIPE_PAYMENT_LINK?.trim() || "",
+  stripePaymentLink:
+    process.env.STRIPE_PAYMENT_LINK?.trim() ||
+    "https://donate.stripe.com/5kQeVfbgPamwftS8xgfQI00",
   hideInteracAddress: true,
 };
 

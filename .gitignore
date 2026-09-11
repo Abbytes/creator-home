@@ -8,3 +8,4 @@
 .env*.local
 !.env.example
 *.tsbuildinfo
+.env.local
