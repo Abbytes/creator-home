@@ -1,1 +1,1 @@
-export const APEX_URL = "/apex/";
+export const APEX_URL = "/hunt/";
