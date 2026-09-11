@@ -1,1 +1,1 @@
-export const APEX_URL = "https://abbytes.github.io/apex/";
+export const APEX_URL = "/apex/";
