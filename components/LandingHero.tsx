@@ -4,10 +4,11 @@ import { APEX_URL } from "@/lib/apex";
 export function LandingHero() {
   return (
     <section
-      className="relative h-[100dvh] max-h-[100dvh] w-full overflow-hidden overscroll-none bg-black bg-center bg-no-repeat"
+      className="relative h-[100dvh] max-h-[100dvh] w-full overflow-hidden overscroll-none bg-black bg-no-repeat"
       style={{
         backgroundImage: "url('/hero-ab-creative-world.png')",
         backgroundSize: "cover",
+        backgroundPosition: "center 42%",
       }}
     >
       <div
@@ -53,7 +54,6 @@ export function LandingHero() {
       </svg>
 
       <div className="relative z-20 flex h-full max-w-[20rem] flex-col justify-start px-4 pt-[5.75rem] sm:max-w-md sm:px-8 sm:pt-24">
-        <h1 className="sr-only">Ab Creative World</h1>
         <p className="hero-fade-up rounded-xl bg-black/55 px-3 py-2 text-sm leading-relaxed text-white/95 backdrop-blur-sm sm:text-base">
           Studio home for trailers, music, and creative drops — tip if you want
           to keep the work going.
@@ -95,6 +95,17 @@ export function LandingHero() {
             Aether
           </Link>
         </div>
+      </div>
+
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-black via-black/70 to-transparent px-3 pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-28">
+        <h1 className="text-center font-serif font-light text-[#ead9b4]">
+          <span className="block text-[clamp(2.6rem,13vw,5.2rem)] leading-none tracking-[0.28em]">
+            AB
+          </span>
+          <span className="mt-2 block whitespace-nowrap text-[clamp(0.78rem,4.6vw,1.45rem)] uppercase tracking-[0.34em]">
+            Creative World
+          </span>
+        </h1>
       </div>
     </section>
   );
