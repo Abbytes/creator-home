@@ -86,6 +86,27 @@ export default function TipPage() {
 
       <section
         className="mb-5 rounded-2xl border border-studio-accent/25 bg-studio-panel p-5 shadow-lg shadow-black/25"
+        aria-labelledby="card-heading"
+      >
+        <h2
+          id="card-heading"
+          className="text-base font-semibold tracking-tight text-studio-text"
+        >
+          Card / international
+        </h2>
+        <p className="mt-1 text-xs text-studio-muted">
+          Visa, Mastercard, and Apple Pay via Stripe.
+        </p>
+        <a
+          href="https://donate.stripe.com/5kQeVfbgPamwftS8xgfQI00"
+          className="relative z-20 mt-4 flex min-h-12 w-full items-center justify-center rounded-xl bg-studio-text px-4 py-3 text-sm font-semibold text-studio-bg active:opacity-80"
+        >
+          Tip with card
+        </a>
+      </section>
+
+      <section
+        className="mb-8 rounded-2xl border border-studio-border bg-studio-panel/60 p-5"
         aria-labelledby="interac-heading"
       >
         <div className="mb-4 flex items-center gap-2">
@@ -158,27 +179,6 @@ export default function TipPage() {
             </div>
           </li>
         </ol>
-      </section>
-
-      <section
-        className="mb-8 rounded-2xl border border-studio-border bg-studio-panel/60 p-5"
-        aria-labelledby="card-heading"
-      >
-        <h2
-          id="card-heading"
-          className="text-sm font-semibold tracking-tight text-studio-text"
-        >
-          Card / international
-        </h2>
-        <p className="mt-1 text-xs text-studio-muted">
-          Visa, Mastercard, and Apple Pay via Stripe.
-        </p>
-        <a
-          href="https://donate.stripe.com/5kQeVfbgPamwftS8xgfQI00"
-          className="relative z-20 mt-4 flex min-h-12 w-full items-center justify-center rounded-xl bg-studio-text px-4 py-3 text-sm font-semibold text-studio-bg active:opacity-80"
-        >
-          Tip with card
-        </a>
       </section>
 
       <footer className="mt-auto border-t border-studio-border/60 pt-6 text-center">
