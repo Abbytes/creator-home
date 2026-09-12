@@ -9,11 +9,21 @@ import { CopyButton } from "@/components/CopyButton";
 
 export const metadata: Metadata = {
   title: "Tip",
-  description: `Send a tip to ${creator.name} via Interac e-Transfer. Supporting: ${creator.goalLabel}.`,
+  description: "Support the next scored trailer — Interac or card.",
   openGraph: {
-    title: `Tip ${creator.name}`,
-    description: `Interac e-Transfer tips toward ${creator.goalLabel}.`,
+    title: "Tip · Ab Creative World",
+    description: "Support the next scored trailer — Interac or card.",
+    url: "https://abbytes.github.io/tip/",
+    images: [
+      { url: "/og-tip.png", width: 1200, height: 630, alt: "Tip Ab Creative World" },
+    ],
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tip · Ab Creative World",
+    description: "Support the next scored trailer — Interac or card.",
+    images: ["/og-tip.png"],
   },
 };
 
@@ -46,6 +56,9 @@ export default function TipPage() {
         <p className="mt-1 text-sm text-studio-muted">{creator.handle}</p>
         <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-studio-muted">
           {creator.tagline}
+        </p>
+        <p className="mx-auto mt-2 max-w-sm text-sm font-medium text-studio-accent/90">
+          Support the next scored trailer — Interac or card.
         </p>
       </header>
 

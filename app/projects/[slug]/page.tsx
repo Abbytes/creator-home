@@ -3,9 +3,12 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { VideoPlayer } from "@/components/VideoPlayer";
+import { ShareLink } from "@/components/ShareLink";
 import { getAllProjects, getProjectBySlug } from "@/lib/projects";
 
 type Props = { params: Promise<{ slug: string }> };
+
+const site = "https://abbytes.github.io";
 
 export function generateStaticParams() {
   return getAllProjects().map((p) => ({ slug: p.slug }));
@@ -15,9 +18,28 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
   if (!project) return { title: "Project" };
+  const isSparta = slug === "spartas-revenge";
+  const description = isSparta
+    ? "Scored trailer cut. Watch + tip if you want more."
+    : project.oneLiner;
+  const image = isSparta ? "/og-sparta.png" : "/og-home.png";
+  const url = `${site}/projects/${slug}/`;
   return {
     title: project.title,
-    description: project.oneLiner,
+    description,
+    openGraph: {
+      title: project.title,
+      description,
+      url,
+      images: [{ url: image, width: 1200, height: 630, alt: project.title }],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: project.title,
+      description,
+      images: [image],
+    },
   };
 }
 
@@ -25,11 +47,12 @@ export default async function ProjectPage({ params }: Props) {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
   if (!project) notFound();
+  const shareUrl = `${site}/projects/${slug}/`;
 
   return (
     <article className="mx-auto max-w-4xl px-4 py-10 sm:px-6 sm:py-14">
       <Link
-        href="/#projects"
+        href="/work"
         className="text-sm text-studio-muted transition hover:text-studio-accent"
       >
         ← All projects
@@ -76,6 +99,20 @@ export default async function ProjectPage({ params }: Props) {
       {project.videoUrl && (
         <div className="mt-8">
           <VideoPlayer src={project.videoUrl} title={project.title} />
+          <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
+            <Link
+              href="/tip"
+              className="text-sm font-medium text-studio-accent transition hover:text-studio-accent/80"
+            >
+              Tip if this hit →
+            </Link>
+            <ShareLink url={shareUrl} />
+          </div>
+          {slug === "spartas-revenge" && (
+            <p className="mt-2 text-xs text-studio-muted">
+              Bed by Sound Tech — tip keeps the next trailer scored.
+            </p>
+          )}
         </div>
       )}
 
