@@ -6,6 +6,8 @@ import {
   goalPercent,
 } from "@/lib/creator";
 import { CopyButton } from "@/components/CopyButton";
+import { TipReturnSting } from "@/components/TipReturnSting";
+import { TipCardLink } from "@/components/TipCardLink";
 
 export const metadata: Metadata = {
   title: "Tip",
@@ -33,6 +35,7 @@ export default function TipPage() {
 
   return (
     <div className="mx-auto flex max-w-lg flex-col px-4 py-10 sm:px-6 sm:py-14">
+      <TipReturnSting />
       <Link
         href="/"
         className="mb-6 text-sm text-studio-muted transition hover:text-studio-accent"
@@ -110,12 +113,7 @@ export default function TipPage() {
         <p className="mt-1 text-xs text-studio-muted">
           Visa, Mastercard, and Apple Pay via Stripe.
         </p>
-        <a
-          href="https://donate.stripe.com/5kQeVfbgPamwftS8xgfQI00"
-          className="relative z-20 mt-4 flex min-h-12 w-full items-center justify-center rounded-xl bg-studio-text px-4 py-3 text-sm font-semibold text-studio-bg active:opacity-80"
-        >
-          Tip with card
-        </a>
+        <TipCardLink />
       </section>
 
       <section
@@ -156,6 +154,7 @@ export default function TipPage() {
                   <CopyButton
                     value={creator.interacEmail}
                     ariaLabel="Copy Interac tip address"
+                    playStingOnCopy
                   />
                 </div>
               ) : (
