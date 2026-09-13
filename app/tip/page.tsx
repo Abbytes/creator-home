@@ -99,14 +99,21 @@ export default function TipPage() {
         <p className="mt-1 text-xs text-studio-muted">
           Card, Apple Pay, and PayPal balance — international.
         </p>
-        <a
-          href={creator.paypalDonateLink}
+        <form
+          action="https://www.paypal.com/donate"
+          method="post"
           target="_blank"
           rel="noopener noreferrer"
-          className="relative z-20 mt-4 flex min-h-12 w-full items-center justify-center rounded-xl bg-[#0070ba] px-4 py-3 text-sm font-semibold text-white active:opacity-80"
+          className="mt-4"
         >
-          Tip with PayPal
-        </a>
+          <input type="hidden" name="hosted_button_id" value="PWUAMSW6FG74A" />
+          <button
+            type="submit"
+            className="relative z-20 flex min-h-12 w-full items-center justify-center rounded-xl bg-[#0070ba] px-4 py-3 text-sm font-semibold text-white active:opacity-80"
+          >
+            Tip with PayPal
+          </button>
+        </form>
       </section>
 
       <section
