@@ -98,8 +98,8 @@ export default function TipPage() {
           PayPal
         </h2>
         <p className="mt-1 text-xs text-studio-muted">
-          Card, Apple Pay, and PayPal balance — international. Pick an amount
-          first — $0 is always declined.
+          Card, Apple Pay, and PayPal balance — international. Any amount, from
+          $1 up.
         </p>
         <PaypalTipForm hostedButtonId="PWUAMSW6FG74A" />
       </section>

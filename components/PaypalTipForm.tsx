@@ -2,17 +2,17 @@
 
 import { useState } from "react";
 
-const PRESETS = [5, 10, 25, 50];
+const PRESETS = [1, 5, 10, 25, 50];
 
 export function PaypalTipForm({
   hostedButtonId,
 }: {
   hostedButtonId: string;
 }) {
-  const [amount, setAmount] = useState(5);
+  const [amount, setAmount] = useState(1);
   const [custom, setCustom] = useState("");
 
-  const value = Math.max(1, Number(custom || amount) || 5);
+  const value = Math.max(1, Number(custom || amount) || 1);
 
   return (
     <form
@@ -59,8 +59,8 @@ export function PaypalTipForm({
         />
       </label>
       <p className="mt-2 text-xs text-studio-muted">
-        PayPal declines $0. If it still shows $0, tap the amount and type {value}{" "}
-        before you pay.
+        If PayPal still shows $0 after an error, tap the amount and type it
+        again before you pay.
       </p>
       <button
         type="submit"
