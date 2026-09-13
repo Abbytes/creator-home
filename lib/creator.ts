@@ -25,10 +25,10 @@ export const creator: CreatorConfig = {
   tagline: "Tips keep the creative work going — any amount helps",
   avatarInitials: "AB",
   goalLabel: "Keep creating",
-  goalRaised: 0,
+  goalRaised: 1,
   goalTarget: 200,
   currency: "CAD",
-  interacEmail: process.env.INTERAC_TIP_EMAIL?.trim() || "adamlegare30@gmail.com",
+  interacEmail: process.env.INTERAC_TIP_EMAIL?.trim() || "",
   interacPhone: undefined,
   interacMessageHint: "Tip for Ab Creative World",
   stripePaymentLink:
