@@ -55,7 +55,7 @@ export default function TipPage() {
           {creator.tagline}
         </p>
         <p className="mx-auto mt-2 max-w-sm text-sm font-medium text-studio-accent/90">
-          Support the next scored trailer — Interac or card.
+          Support the studio — Interac or card.
         </p>
       </header>
 
@@ -64,16 +64,16 @@ export default function TipPage() {
         aria-labelledby="fund-heading"
       >
         <p className="text-xs uppercase tracking-[0.18em] text-studio-muted">
-          What tips fund
+          Why tip
         </p>
         <h2
           id="fund-heading"
           className="mt-2 text-lg font-semibold tracking-tight text-studio-text"
         >
-          Tips fund the next scored cut + Apex clips
+          Tips keep Ab Creative World growing
         </h2>
         <p className="mt-2 text-sm leading-relaxed text-studio-muted">
-          Any amount keeps the trailers scored and the next Apex drop coming.
+          Games, scored trailers, music, clips — whatever’s next.
         </p>
       </section>
 
