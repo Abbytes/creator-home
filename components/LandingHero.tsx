@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { APEX_URL } from "@/lib/apex";
+import { DISCORD_INVITE } from "@/lib/discord";
 
 export function LandingHero() {
   return (
@@ -105,6 +106,15 @@ export function LandingHero() {
           >
             Aether
           </Link>
+          <a
+            href={DISCORD_INVITE}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-11 items-center rounded-full border border-white/25 bg-white/5 px-5 py-2 text-sm text-white/85 backdrop-blur transition hover:border-white/50 hover:text-white"
+            style={{ touchAction: "manipulation" }}
+          >
+            Join Discord
+          </a>
         </div>
       </div>
     </section>

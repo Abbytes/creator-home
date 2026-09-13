@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { creator } from "@/lib/creator";
+import { DISCORD_INVITE } from "@/lib/discord";
 import { CopyButton } from "@/components/CopyButton";
 import { TipReturnSting } from "@/components/TipReturnSting";
 
@@ -75,6 +76,14 @@ export default function TipPage() {
         <p className="mt-2 text-sm leading-relaxed text-studio-muted">
           Games, scored trailers, music, clips — whatever’s next.
         </p>
+        <a
+          href={DISCORD_INVITE}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 flex min-h-11 w-full items-center justify-center rounded-xl border border-studio-border px-4 py-2.5 text-sm font-medium text-studio-text transition hover:border-studio-accent/50 hover:text-studio-accent"
+        >
+          Join Discord
+        </a>
       </section>
 
       <section
