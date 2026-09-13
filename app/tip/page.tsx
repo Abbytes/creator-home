@@ -3,6 +3,7 @@ import Link from "next/link";
 import { creator } from "@/lib/creator";
 import { DISCORD_INVITE } from "@/lib/discord";
 import { CopyButton } from "@/components/CopyButton";
+import { PaypalTipForm } from "@/components/PaypalTipForm";
 import { TipReturnSting } from "@/components/TipReturnSting";
 
 export const metadata: Metadata = {
@@ -97,23 +98,10 @@ export default function TipPage() {
           PayPal
         </h2>
         <p className="mt-1 text-xs text-studio-muted">
-          Card, Apple Pay, and PayPal balance — international.
+          Card, Apple Pay, and PayPal balance — international. Pick an amount
+          first — $0 is always declined.
         </p>
-        <form
-          action="https://www.paypal.com/donate"
-          method="post"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-4"
-        >
-          <input type="hidden" name="hosted_button_id" value="PWUAMSW6FG74A" />
-          <button
-            type="submit"
-            className="relative z-20 flex min-h-12 w-full items-center justify-center rounded-xl bg-[#0070ba] px-4 py-3 text-sm font-semibold text-white active:opacity-80"
-          >
-            Tip with PayPal
-          </button>
-        </form>
+        <PaypalTipForm hostedButtonId="PWUAMSW6FG74A" />
       </section>
 
       <section
