@@ -16,6 +16,7 @@ export type CreatorConfig = {
   interacPhone?: string;
   interacMessageHint: string;
   stripePaymentLink: string;
+  paypalDonateLink: string;
   hideInteracAddress: boolean;
 };
 
@@ -34,6 +35,9 @@ export const creator: CreatorConfig = {
   stripePaymentLink:
     process.env.STRIPE_PAYMENT_LINK?.trim() ||
     "https://donate.stripe.com/5kQeVfbgPamwftS8xgfQI00",
+  paypalDonateLink:
+    process.env.PAYPAL_DONATE_LINK?.trim() ||
+    "https://www.paypal.com/donate/?hosted_button_id=PWUAMSW6FG74A",
   hideInteracAddress: true,
 };
 
