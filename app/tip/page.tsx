@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  creator,
-  formatCad,
-  goalPercent,
-} from "@/lib/creator";
+import { creator } from "@/lib/creator";
 import { CopyButton } from "@/components/CopyButton";
 import { TipReturnSting } from "@/components/TipReturnSting";
 
@@ -29,7 +25,6 @@ export const metadata: Metadata = {
 };
 
 export default function TipPage() {
-  const pct = goalPercent();
   const hasInterac = Boolean(creator.interacEmail);
 
   return (
@@ -66,37 +61,20 @@ export default function TipPage() {
 
       <section
         className="mb-6 rounded-2xl border border-studio-border bg-studio-panel/90 p-5 shadow-lg shadow-black/20"
-        aria-labelledby="goal-heading"
+        aria-labelledby="fund-heading"
       >
-        <div className="flex items-baseline justify-between gap-3">
-          <h2 id="goal-heading" className="text-sm font-medium text-studio-text">
-            Soft goal ·{" "}
-            <span className="text-studio-accent">{creator.goalLabel}</span>
-          </h2>
-          <span className="text-xs text-studio-muted">{pct}%</span>
-        </div>
-        <p className="mt-2 text-lg font-semibold tracking-tight">
-          {formatCad(creator.goalRaised)}{" "}
-          <span className="text-sm font-normal text-studio-muted">
-            of {formatCad(creator.goalTarget)}
-          </span>
+        <p className="text-xs uppercase tracking-[0.18em] text-studio-muted">
+          What tips fund
         </p>
-        <p className="mt-1 text-xs text-studio-muted">
-          Not a tip cap — fans can send any amount.
-        </p>
-        <div
-          className="mt-4 h-2 overflow-hidden rounded-full bg-studio-border"
-          role="progressbar"
-          aria-valuenow={pct}
-          aria-valuemin={0}
-          aria-valuemax={100}
-          aria-label={`Goal progress ${pct} percent`}
+        <h2
+          id="fund-heading"
+          className="mt-2 text-lg font-semibold tracking-tight text-studio-text"
         >
-          <div
-            className="h-full rounded-full bg-gradient-to-r from-studio-accent to-studio-accent2 transition-all duration-500"
-            style={{ width: `${pct}%` }}
-          />
-        </div>
+          Tips fund the next scored cut + Apex clips
+        </h2>
+        <p className="mt-2 text-sm leading-relaxed text-studio-muted">
+          Any amount keeps the trailers scored and the next Apex drop coming.
+        </p>
       </section>
 
       <section
