@@ -98,7 +98,11 @@ export default async function ProjectPage({ params }: Props) {
 
       {project.videoUrl && (
         <div className="mt-8">
-          <VideoPlayer src={project.videoUrl} title={project.title} />
+          <VideoPlayer
+            src={project.videoUrl}
+            title={project.title}
+            muted={project.videoMuted !== false}
+          />
           <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
             <Link
               href="/tip"

@@ -11,6 +11,7 @@ export type ProjectFrontmatter = {
   tags?: string[];
   featured?: boolean;
   videoUrl?: string;
+  videoMuted?: boolean;
   credit?: string;
   playUrl?: string;
   playLabel?: string;
@@ -51,6 +52,7 @@ export function getProjectBySlug(slug: string): Project | null {
     tags: fm.tags || [],
     featured: Boolean(fm.featured),
     videoUrl: fm.videoUrl,
+    videoMuted: fm.videoMuted !== false,
     credit: fm.credit,
     playUrl: fm.playUrl,
     playLabel: fm.playLabel,

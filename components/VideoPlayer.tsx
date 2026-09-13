@@ -3,9 +3,10 @@
 type VideoPlayerProps = {
   src: string;
   title: string;
+  muted?: boolean;
 };
 
-export function VideoPlayer({ src, title }: VideoPlayerProps) {
+export function VideoPlayer({ src, title, muted = true }: VideoPlayerProps) {
   return (
     <div className="overflow-hidden rounded-xl border border-studio-border bg-black shadow-2xl shadow-black/40">
       <div className="relative aspect-video w-full bg-black">
@@ -15,7 +16,7 @@ export function VideoPlayer({ src, title }: VideoPlayerProps) {
           playsInline
           preload="metadata"
           // Mute on + autoplay OFF by default — user starts playback intentionally
-          muted
+          muted={muted}
           autoPlay={false}
           title={title}
         >
