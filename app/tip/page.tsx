@@ -88,24 +88,22 @@ export default function TipPage() {
 
       <section
         className="mb-5 rounded-2xl border border-studio-accent/25 bg-studio-panel p-5 shadow-lg shadow-black/25"
-        aria-labelledby="paypal-heading"
+        aria-labelledby="card-heading"
       >
         <h2
-          id="paypal-heading"
+          id="card-heading"
           className="text-base font-semibold tracking-tight text-studio-text"
         >
-          PayPal
+          Card / international
         </h2>
         <p className="mt-1 text-xs text-studio-muted">
-          Card, Apple Pay, and PayPal balance — international. Any amount.
+          Visa, Mastercard, and Apple Pay via Stripe.
         </p>
         <a
-          href={creator.paypalDonateLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="relative z-20 mt-4 flex min-h-12 w-full items-center justify-center rounded-xl bg-[#0070ba] px-4 py-3 text-sm font-semibold text-white active:opacity-80"
+          href={creator.stripePaymentLink}
+          className="relative z-20 mt-4 flex min-h-12 w-full items-center justify-center rounded-xl bg-studio-text px-4 py-3 text-sm font-semibold text-studio-bg active:opacity-80"
         >
-          Tip with PayPal
+          Tip with card
         </a>
       </section>
 
