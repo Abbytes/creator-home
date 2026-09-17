@@ -19,6 +19,12 @@ const tabs = [
     kind: "tab" as const,
   },
   {
+    href: "/live/",
+    label: "Live",
+    match: (p: string) => p.includes("live"),
+    kind: "aether" as const,
+  },
+  {
     href: APEX_URL,
     label: "APEX",
     match: () => false,
