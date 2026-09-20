@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { APEX_URL } from "@/lib/apex";
+import { MINER_URL } from "@/lib/miner";
 
 const tabs = [
   { href: "/", label: "Home", match: (p: string) => p === "/", kind: "tab" as const },
@@ -34,6 +35,12 @@ const tabs = [
     href: "/aether/",
     label: "Aether",
     match: (p: string) => p.includes("aether"),
+    kind: "aether" as const,
+  },
+  {
+    href: MINER_URL,
+    label: "Miner",
+    match: () => false,
     kind: "aether" as const,
   },
   { href: "/tip", label: "Tip", match: (p: string) => p.startsWith("/tip"), kind: "tip" as const },
