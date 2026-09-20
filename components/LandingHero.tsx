@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { APEX_URL } from "@/lib/apex";
+import { MINER_URL } from "@/lib/miner";
 import { DISCORD_INVITE } from "@/lib/discord";
 
 export function LandingHero() {
@@ -120,6 +121,13 @@ export function LandingHero() {
           >
             Aether
           </Link>
+          <a
+            href={MINER_URL}
+            className="inline-flex min-h-11 items-center rounded-full border border-white/35 bg-white/10 px-5 py-2 text-sm font-medium text-white backdrop-blur transition hover:border-studio-accent/60 hover:bg-studio-accent/15"
+            style={{ touchAction: "manipulation" }}
+          >
+            Play Miner
+          </a>
           <a
             href={DISCORD_INVITE}
             target="_blank"
