@@ -73,6 +73,13 @@ export function LandingHero() {
         </p>
         <div className="hero-fade-up-delay mx-auto mt-3 flex max-w-sm flex-wrap justify-center gap-2">
           <a
+            href="https://muse.ai/s/new-tcg-jxa63shzxpxa77"
+            className="inline-flex min-h-11 items-center rounded-full bg-studio-accent px-5 py-2 text-sm font-semibold text-studio-bg shadow-glow"
+            style={{ touchAction: "manipulation" }}
+          >
+            Play New TCG
+          </a>
+          <a
             href="/live/"
             className="inline-flex min-h-11 items-center rounded-full border border-studio-accent/60 bg-studio-accent/15 px-5 py-2 text-sm font-semibold text-studio-accent"
             style={{ touchAction: "manipulation" }}

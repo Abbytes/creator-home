@@ -20,6 +20,12 @@ const tabs = [
     kind: "tab" as const,
   },
   {
+    href: "https://muse.ai/s/new-tcg-jxa63shzxpxa77",
+    label: "New TCG",
+    match: () => false,
+    kind: "aether" as const,
+  },
+  {
     href: "/live/",
     label: "Live",
     match: (p: string) => p.includes("live"),
